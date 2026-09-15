@@ -17,12 +17,12 @@ http_req_failed:
 ### STEP 3 RESULTS (5, 30, 100 VU combined result) ###
 
 http_req_duration:
-    avg: 469.57ms
-    p90: 614.75ms
-    p95: 673.84ms
+    avg: 200.45ms
+    p90: 354.61ms
+    p95: 366.27ms
 http_reqs:
-    total: 4578
-    rate: ~30.22/s
+    total: 6454
+    rate: 42.90/s
 http_req_failed:
     total: 0
     pofod: 0%
@@ -31,36 +31,63 @@ http_req_failed:
 
 # 5 VUs
 http_req_duration:
-    avg: 461.96ms
-    p90: 605.28ms
-    p95: 656.25ms
+    avg: 204.80ms
+    p90: 357.55ms
+    p95: 390.75ms
 http_reqs:
-    total: 302
-    rate: ~4.95/s
+    total: 420
+    rate: 6.90/s
 http_req_failed:
     total: 0
     pofod: 0%
 
 # 30 VUs
 http_req_duration:
-    avg: 466.95ms
-    p90: 613.44ms
-    p95: 668.06ms
+    avg: 202.56ms
+    p90: 356.05ms
+    p95: 372.48ms
 http_reqs:
-    total: 1812
-    rate: ~29.27/s
+    total: 2542
+    rate: 41.44/s
 http_req_failed:
     total: 0
     pofod: 0%
 
 # 100 VUs
 http_req_duration:
-    avg: 567.81ms
-    p90: 636.26ms
-    p95: 765.33ms
+    avg: 199.78ms
+    p90: 353.23ms
+    p95: 369.08ms
 http_reqs:
-    total: 5432
-    rate: ~87.68/s
+    total: 4220
+    rate: ~68.66/s
+http_req_failed:
+    total: 2
+    pofod: 0.02%
+
+### STEP 4 RESULTS (adding SLO thresholds to show a pass and a fail) ###
+
+# pass
+http_req_duration:
+    avg: 202.99ms
+    p90: 357.45ms
+    p95: 370.86ms < 540ms -- passed
+http_reqs:
+    total: 2534
+    rate: ~41.27/s
 http_req_failed:
     total: 0
     pofod: 0%
+
+# fail
+http_req_duration:
+    avg: 202.44ms
+    p90: 356.61ms
+    p95: 370.60ms < 100ms -- failed
+http_reqs:
+    total: 2540
+    rate: ~41.38/s
+http_req_failed:
+    total: 0
+    pofod: 0%
+
