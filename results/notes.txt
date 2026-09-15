@@ -1,0 +1,66 @@
+ ### STEP 2 RESULTS (5 VU only) ###
+
+http_req_duration:
+    avg: 197.19ms
+    p90: 347.19ms
+    p95: 362.63ms -- now use this for the baseline -> 360 * 1.5 = 540ms
+
+    
+http_reqs:
+    total: 210
+    rate: ~6.78/s
+http_req_failed:
+    total: 0
+    pofod: 0%
+
+
+### STEP 3 RESULTS (5, 30, 100 VU combined result) ###
+
+http_req_duration:
+    avg: 469.57ms
+    p90: 614.75ms
+    p95: 673.84ms
+http_reqs:
+    total: 4578
+    rate: ~30.22/s
+http_req_failed:
+    total: 0
+    pofod: 0%
+
+## seperate results for each VU amount
+
+# 5 VUs
+http_req_duration:
+    avg: 461.96ms
+    p90: 605.28ms
+    p95: 656.25ms
+http_reqs:
+    total: 302
+    rate: ~4.95/s
+http_req_failed:
+    total: 0
+    pofod: 0%
+
+# 30 VUs
+http_req_duration:
+    avg: 466.95ms
+    p90: 613.44ms
+    p95: 668.06ms
+http_reqs:
+    total: 1812
+    rate: ~29.27/s
+http_req_failed:
+    total: 0
+    pofod: 0%
+
+# 100 VUs
+http_req_duration:
+    avg: 567.81ms
+    p90: 636.26ms
+    p95: 765.33ms
+http_reqs:
+    total: 5432
+    rate: ~87.68/s
+http_req_failed:
+    total: 0
+    pofod: 0%
