@@ -5,6 +5,6 @@ export const options = { vus: 5, duration: "30s" };
 
 export default function () {
   const res = http.get('https://test.k6.io'); // -> https://quickpizza.grafana.com/
-  check(res, { 'status 200 байна': (r) => r.status === 200 });
+  check(res, { '200 OK': (r) => r.status === 200 });
   sleep(1);
 }
